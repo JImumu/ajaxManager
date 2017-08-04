@@ -4,13 +4,13 @@
 	};
 	AjaxManager.prototype.addTask = function(obj,sucfun,failfun){
 		var task = function(){
-			_sucfun = function (data){
+			var _sucfun = function (data){
 				if(typeof sucfun == 'function'){
 					sucfun(data)
 				}
 				task.status = true;
 			};
-			_failfun = function (data){
+			var _failfun = function (data){
 				if(typeof failfun == 'function'){
 					failfun(data)
 				}
